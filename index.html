@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Panduan lengkap Kali Linux — sejarah, tools, dan instalasi. Desain futuristik, interaktif, dan elegan." />
+  <title>Kali Linux — Cyber Guide (Final)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- particle canvas -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- background video -->
+  <video autoplay muted loop id="bg-video" aria-hidden="true">
+    <source src="assets/video/background_video.mp4" type="video/mp4">
+  </video>
+
+  <!-- NAVBAR -->
+<header class="site-header">
+  <nav class="navbar">
+    <div class="brand">
+      <img src="assets/logo/logo_kali.png" alt="Kali Linux Logo" class="brand-logo">
+      <span class="logo-text">Kali Linux</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sejarah">Sejarah</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#instalasi">Instalasi</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title">
+        <span class="type-leading">Di balik layar—</span>
+        <span class="type-dynamic" id="type-history"></span>
+      </h1>
+      <p class="hero-sub">Sebuah karya alat: bukan untuk merusak, melainkan untuk mengungkap kerapuhan dan memperkuat benteng.</p>
+      <a class="cta" href="#instalasi">Mulai Panduan</a>
+    </div>
+  </section>
+
+  <main class="main-wrap">
+
+    <!-- SEJARAH (lebih puitis & elegan) -->
+    <section id="sejarah" class="panel anim">
+      <div class="panel-inner">
+        <h2 class="section-title">Sejarah — Lintasan Kali Linux</h2>
+        <div class="sejarah-grid">
+          <div class="sejarah-text">
+            <p class="lead">
+              Lembaran kelam dunia siber menemukan sebuah instrumen — <strong>Kali Linux</strong>. 
+              Lahir dari jejak BackTrack, distro ini bukan sekadar alat: ia adalah <em>pisau bedah digital</em> bagi yang ingin memahami, bukan menghancurkan.
+            </p>
+            <p>
+              Dikembangkan oleh <strong>Offensive Security</strong> dan dirilis pada <strong>13 Maret 2013</strong>, Kali berakar di Debian,
+              membawa koleksi ratusan tools untuk pentest, forensik, dan analisa. Versi modernnya siap dipakai pada ARM, WSL, dan cloud.
+            </p>
+            <p class="muted">Keamanan sejati dimulai dengan pengetahuan — Kali memberi alat, bukan niat.</p>
+          </div>
+          <div class="sejarah-timeline">
+            <div class="tl-item"><span class="tl-year">2006</span><div class="tl-desc">BackTrack lahir — gabungan WHAX & Auditor.</div></div>
+            <div class="tl-item"><span class="tl-year">2013</span><div class="tl-desc">Resmi dirilis: Kali Linux (13 Maret).</div></div>
+            <div class="tl-item"><span class="tl-year">2016</span><div class="tl-desc">Dukungan ARM & virtualisasi diperluas.</div></div>
+            <div class="tl-item"><span class="tl-year">2019</span><div class="tl-desc">Model rilis rolling untuk update terus menerus.</div></div>
+            <div class="tl-item"><span class="tl-year">2020+</span><div class="tl-desc">Mode Undercover, WSL, cloud-ready features.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS (cards 3D + glow) -->
+    <section id="tools" class="panel anim">
+      <div class="panel-inner">
+        <h2 class="section-title">Tools Unggulan — Senjata & Mata</h2>
+        <div class="tools-grid">
+          <article class="tool-card" data-tool="Metasploit">
+            <div class="tool-head">Metasploit</div>
+            <p class="tool-desc">Framework eksploitasi komprehensif — platform uji yang memudahkan simulasi serangan nyata.</p>
+          </article>
+          <article class="tool-card" data-tool="Nmap">
+            <div class="tool-head">Nmap</div>
+            <p class="tool-desc">Pemindai jaringan andal yang "melihat" host, port, dan service tersembunyi.</p>
+          </article>
+          <article class="tool-card" data-tool="Wireshark">
+            <div class="tool-head">Wireshark</div>
+            <p class="tool-desc">Pendengar paket jaringan — capture lalu analisa lalu lintas secara detail.</p>
+          </article>
+          <article class="tool-card" data-tool="Burp Suite">
+            <div class="tool-head">Burp Suite</div>
+            <p class="tool-desc">Toolkit untuk menelusuri dan mengeksploitasi celah aplikasi web.</p>
+          </article>
+          <article class="tool-card" data-tool="Aircrack-ng">
+            <div class="tool-head">Aircrack-ng</div>
+            <p class="tool-desc">Audit keamanan Wi-Fi — memeriksa kelemahan pada WPA/WPA2.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTALASI (timeline + gallery) -->
+    <section id="instalasi" class="panel anim">
+      <div class="panel-inner">
+        <h2 class="section-title">Panduan Instalasi — Langkah demi Langkah</h2>
+        <p class="lead">Ikuti alur terstruktur ini. Klik tiap gambar untuk melihat deskripsi langkah & progress.</p>
+
+        <div class="instal-grid">
+          <div class="instal-timeline">
+            <!-- vertical timeline visual -->
+            <div class="step-tl"><div class="num">1</div><div class="txt">Unduh ISO resmi di <a href="https://www.kali.org/get-kali/" target="_blank" class="install-link">kali.org</a> pilih image</div></div>
+            <div class="step-tl"><div class="num">2</div><div class="txt">Unduh Virtualbox di <a href="https://www.virtualbox.org/" target="_blank" class="install-link">vitualbox.org</a></div></div>
+            <div class="step-tl"><div class="num">3</div><div class="txt">Unduh <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" class="install-link">Extension Pack</a> Virtualbox</div></div>
+            <div class="step-tl"><div class="num">4</div><div class="txt">Pemasangan Virtual box cukup klik next</div></div>
+            <div class="step-tl"><div class="num">5</div><div class="txt">Virtual box masuk expert mode</div></div>
+            <div class="step-tl"><div class="num">6</div><div class="txt">Pemasangan Extension Pack klik next aja</div></div>
+            <div class="step-tl"><div class="num">7</div><div class="txt">Jika sudah lanjut setting dan pasang kali --></div></div>
+          </div>
+
+          <div class="instal-gallery" id="instal-gallery" aria-live="polite">
+            <!-- gallery items generated by JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="assets/logo/logo_kali.png" alt="Kali Linux Logo" class="footer-logo-img">
+      <h3 class="footer-title">Kali Linux</h3>
+    </div>
+
+    <p class="footer-text">
+      “Powerful. Secure. Free. — The Penetration Testing Platform of Choice.”
+    </p>
+
+    <ul class="footer-links">
+      <li><a href="#sejarah">Sejarah</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#instalasi">Instalasi</a></li>
+    </ul>
+
+    <div class="footer-line"></div>
+    <p class="footer-credit">© 2025 Kali Linux Project | Crafted by <span>H̶m̶d̶ ̶A̶l̶b̶r̶</span></p>
+  </div>
+</footer>
+
+
+  <!-- MUSIC CONTROL (CD) -->
+  <div class="music-control" aria-hidden="false">
+    <img src="assets/icons/icon_musik.png" id="cd-icon" alt="CD Music">
+    <audio id="bg-music" loop>
+      <source src="assets/audio/background_music.mp3" type="audio/mp3">
+    </audio>
+    <span id="music-status" class="music-status">Music: OFF</span>
+  </div>
+
+  <!-- MODAL (IMAGE + DESCRIPTION + PROGRESS) -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-wrapper">
+      <button class="modal-close" aria-label="Tutup">&times;</button>
+      <div class="modal-body">
+        <div class="modal-left">
+          <img id="modal-image" src="" alt="Langkah">
+        </div>
+        <div class="modal-right">
+          <h3 id="modal-title">Langkah</h3>
+          <div class="modal-stepinfo">
+            <span id="modal-step">1</span> / <span id="modal-total">20</span>
+          </div>
+          <div class="modal-progressbar">
+            <div id="modal-progress" style="width:0%"></div>
+          </div>
+          <p id="modal-desc">Deskripsi langkah.</p>
+          <div class="modal-controls">
+            <button id="modal-prev" class="btn-outline">Prev</button>
+            <button id="modal-next" class="btn-primary">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="music.js"></script>
+</body>
+</html>
