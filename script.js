@@ -1,13 +1,3 @@
-/* ---------------------------
-  script.js
-  - particle background
-  - typing effect for hero (history)
-  - reveal on scroll
-  - generate gallery 20 items with lorem descriptions
-  - modal logic (open/close/prev/next)
-  - small UX: smooth anchors & parallax subtle
-----------------------------*/
-
 /* ---------- PARTICLE BACKGROUND (lightweight) ---------- */
 (function particleBG(){
   const canvas = document.getElementById('particle-canvas');
